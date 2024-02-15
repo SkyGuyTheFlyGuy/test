@@ -1,8 +1,7 @@
-const readlineSync = require('readline-sync');
+import sayHello from "../utils/helloworld.mjs";
+import assert from 'assert';
 
-function getAndGreet() {
-    var name = readlineSync.question("Please enter your name: ");
-    console.log("Hello " + name);
-}
-
-getAndGreet();
+it("Hello World", ()=>{
+    const hello = sayHello();
+    assert.equal(hello, "Hello");
+});
